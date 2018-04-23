@@ -2,7 +2,6 @@ import {onelresize} from './elresizeEvent'
 
 export default {
     inserted: function (el) {
-        console.log(this)
         onelresize(el, function(){
             // 创建
             var evt = document.createEvent("HTMLEvents");
