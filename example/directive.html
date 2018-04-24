@@ -1,0 +1,97 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="../dist/vue-element-resize-event.js"></script>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .test{
+            margin: 0;
+            background: #e6e6e6;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+        .elresize{
+            background: red;
+            width: 100px;
+            height: 100px;
+            resize: both;
+        }
+        .box {
+            position: relative;
+            background: #2ecc71;
+        }
+        .label{
+            width: 220px;
+            height: 40px;
+            line-height: 40px;
+            text-align: left;
+        }
+        .title{
+            width: 50px;
+            display: inline-block;
+        }
+        .range{
+            width: 140px; 
+            -webkit-appearance: none;  
+            background: #059CFA; 
+            height: 3px;
+            outline: none;
+            vertical-align: middle;
+        }
+        .range::-webkit-slider-thumb {  
+            -webkit-appearance: none; 
+            height: 26px;  
+            width: 26px;
+            background: #fff;
+            border-radius: 50%;  
+            border: solid 1px #ddd;
+        }   
+    </style>
+        
+</head>
+<body>
+
+    <div id="app">
+        <div class="test">
+            <label class="label">
+                <span class="title">width:</span> 
+                <input id="widthInput" type="range" class="range" max="200" min="100" v-model="width">px
+            </label>
+            <label class="label">
+                <span class="title">height:</span> 
+                <input id="heightInput" type="range" class="range" max="200" min="100" v-model="height">px
+            </label>
+    
+            <div class="box" :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test">
+                resize count : {{resizeCount}}
+            </div>
+        </div>
+    </div>
+    <script>
+        Vue.use(vueElementResizeEvent)
+        var app = new Vue({
+            el: '#app',
+            data: {
+                width: '200',
+                height: '200',
+                resizeCount: 0
+            },
+            methods: {
+                test(e){
+                    this.resizeCount++
+                },
+            }
+        })
+    </script>
+</body>
+</html>
