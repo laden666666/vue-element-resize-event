@@ -8,7 +8,11 @@
 https://blog.crimx.com/2017/07/15/element-onresize/
 
 ## 使用
-使用 **v-elresize** 指令，监听elresize事件
+使用 **v-elresize** 指令，监听elresize事件。要求div的position值不能为static
 ```
-<div class="box" :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test"></div>
+<div :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test"></div>
+```
+使用 **Elresize** 控件，监听elresize事件
+```
+<Elresize :style="{width: width + 'px', height: height + 'px'}" @elresize="test"></Elresize>
 ```
