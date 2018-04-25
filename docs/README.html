@@ -199,6 +199,29 @@ pre[class*="language-"] {
     padding: 1.2em 1.4em;
     line-height: 1.5em;
     margin: 0;
+}.mydoc_h3{
+    margin: 35px 0 0.8em;
+}
+.mydoc_h3_a{
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #2c3e50;
+}
+.mydoc_h3_a::before{
+    content: '';
+    display: block;
+    margin-top: -30px;
+    height: 30px;
+    visibility: hidden;
+}
+.mydoc_h3_h3{
+    margin: 5px 0 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    padding-bottom: .6em;
+}
+.mydoc_h3_content{
+
 }.mydoc_span{
     padding: 2px 4px;
     font-size: 90%;
@@ -250,12 +273,26 @@ Vue<span class="token punctuation">.</span><span class="token function">use</spa
                         <h2 class="mydoc_h2_h2">使用</h2>
                     </a>
                     <div class="mydoc_h2_content">
-                        <p class="mydoc_p"> vue-element-resize-event提供了两种使用方式——directive和component。</p><p class="mydoc_p"> 使用<span class="mydoc_span">v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p><figure class='mydoc_code'>
+                        <p class="mydoc_p"> vue-element-resize-event提供了两种使用方式——directive和component。</p><div class="mydoc_h3">
+                <a class="mydoc_h3_a">
+                    <h3 class="mydoc_h3_h3">指令</h3>
+                </a>
+                <div class="mydoc_h3_content">
+                    <p class="mydoc_p"> 使用<span class="mydoc_span">v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p><figure class='mydoc_code'>
                     <pre class="mydoc_code_pre cm-s-eclipse"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span> <span class="token attr-name">v-elresize</span> <span class="token attr-name">@elresize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>doc</span><span class="token punctuation">></span></span></pre>
-                </figure><p class="mydoc_p"> 使用<span class="mydoc_span">Elresize</span>控件监听elresize事件：</p><figure class='mydoc_code'>
+                </figure><p class="mydoc_p"> <a class="mydoc_a" href="https://laden666666.github.io/vue-element-resize-event/directive.html">demo</a></p>
+                </div>
+            </div><div class="mydoc_h3">
+                <a class="mydoc_h3_a">
+                    <h3 class="mydoc_h3_h3">控件</h3>
+                </a>
+                <div class="mydoc_h3_content">
+                    <p class="mydoc_p"> 使用<span class="mydoc_span">Elresize</span>控件监听elresize事件：</p><figure class='mydoc_code'>
                     <pre class="mydoc_code_pre cm-s-eclipse"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Elresize</span> <span class="token attr-name">@elresize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Elresize</span><span class="token punctuation">></span></span></pre>
-                </figure><p class="mydoc_p"> 大家可以结合项目的需求选用事件或者是指令。</p>
+                </figure><p class="mydoc_p"> <a class="mydoc_a" href="https://laden666666.github.io/vue-element-resize-event/component.html">demo</a></p>
+                </div>
+            </div>
                     </div>
                 </div>
 </article>

@@ -35,15 +35,20 @@ export default {
 
     <h2>使用</h2>
     <p>vue-element-resize-event提供了两种使用方式——directive和component。</p>
+
+    <h3>指令</h3>
     <p>使用<span>v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p>
     <code lang="html">{
 `<div style="position: relative;" v-elresize @elresize="test"></div>
 </doc>`
     }</code>
+    <p><a href="https://laden666666.github.io/vue-element-resize-event/directive.html">demo</a></p>
+
+    <h3>控件</h3>
     <p>使用<span>Elresize</span>控件监听elresize事件：</p>
     <code lang="html">{
 `<Elresize @elresize="test"></Elresize>`
     }</code>
-    <p>大家可以结合项目的需求选用事件或者是指令。</p>
+    <p><a href="https://laden666666.github.io/vue-element-resize-event/component.html">demo</a></p>
 </doc>
     
