@@ -4,18 +4,18 @@
     <p>模拟的方法主要有两种：<a href="https://github.com/KyleAMathews/element-resize-event">监听scroll事件</a>和嵌入<a href="https://github.com/developit/simple-element-resize-detector">object（iframe）</a>。因为object（iframe）很耗费资源，而且会被CSP策略限制，所以vue-element-resize-event选用了第一种方法。</p>
 
     <h2>安装</h2>
-    <code>{
+    <code lang="javascript">{
 `npm install vue-element-resize-event`
     }</code>
     <p>可以采用插件形式的全局安装：</p>
-    <code>{
+    <code lang="javascript">{
 `import Vue from 'vue'
 import * as ElResize from 'vue-element-resize-event'
 Vue.use(ElResize)
 `
     }</code>
     <p>也可以采用局部安装：</p>
-    <code>{
+    <code lang="javascript">{
 `import {
     elresizeDirective,
     elresize,
@@ -36,12 +36,12 @@ export default {
     <h2>使用</h2>
     <p>vue-element-resize-event提供了两种使用方式——directive和component。</p>
     <p>使用<span>v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p>
-    <code>{
+    <code lang="html">{
 `<div style="position: relative;" v-elresize @elresize="test"></div>
 </doc>`
     }</code>
     <p>使用<span>Elresize</span>控件监听elresize事件：</p>
-    <code>{
+    <code lang="html">{
 `<Elresize @elresize="test"></Elresize>`
     }</code>
     <p>大家可以结合项目的需求选用事件或者是指令。</p>
