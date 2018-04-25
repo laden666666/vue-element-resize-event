@@ -22,6 +22,6 @@
     </style>
 </head>
 <body>
-    <iframe class="readme" src="./README.html" frameborder="0" onload="document.body.height = this.contentDocument.innerHeight"></iframe>
+    <iframe class="readme" src="./README.html" frameborder="0" onload="this.style.height = this.contentDocument.querySelector('.mydoc').clientHeight + 20 + 'px'"></iframe>
 </body>
 </html>
