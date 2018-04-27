@@ -12,16 +12,312 @@
             padding: 0;
             margin: 0;
         }
-        .readme{
-            height: 100vh;
+        .mydoc{
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             border: none;
-        }
+            }
     </style>
 </head>
 <body>
-    <iframe class="readme" src="./README.html" frameborder="0" onload="this.style.height = this.contentDocument.querySelector('.mydoc').clientHeight + 20 + 'px'"></iframe>
+<style>.mydoc_h1{
+    margin: 0 0 1em;
+}
+.mydoc_h1_a{
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 2em;
+}
+.mydoc_h1_h1{
+    margin: 45px 0 8px;
+    padding-bottom: 7px;
+    font-size: 28px;
+}
+.mydoc_h1_content{
+
+}.mydoc_p{
+    line-height: 1.6em;
+    margin: 1.2em 0 -1.2em;
+    padding-bottom: 1.2em;
+    position: relative;
+    z-index: 1;
+    color: #333;
+}.mydoc_a{
+    color: #42b983;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+}.mydoc_h2{
+    margin: 35px 0 0.8em;
+}
+.mydoc_h2_a{
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #2c3e50;
+}
+.mydoc_h2_a::before{
+    content: '';
+    display: block;
+    margin-top: -40px;
+    height: 40px;
+    visibility: hidden;
+}
+.mydoc_h2_h2{
+    margin: 5px 0 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 22px;
+    padding-bottom: 1em;
+}
+.mydoc_h2_content{
+
+}/**
+    * prism.js default theme for JavaScript, CSS and HTML
+    * Based on dabblet (http://dabblet.com)
+    * @author Lea Verou
+    */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: black;
+    background: none;
+    text-shadow: 0 1px white;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+    text-shadow: none;
+    background: #b3d4fc;
+}
+
+@media print {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        text-shadow: none;
+    }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: slategray;
+}
+
+.token.punctuation {
+    color: #999;
+}
+
+.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #a67f59;
+    background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #07a;
+}
+
+.token.function {
+    color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e90;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+.mydoc_code{
+    overflow-x: auto;
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 0;
+    line-height: 1.1em;
+    border-radius: 2px;
+    margin: 1.2em 0;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8AgMAAABHkjHhAAAACVBMVEWAgIBaWlo+Pj7rTFvWAAAAA3RSTlMHCAw+VhR4AAAA+klEQVQoz4WSMW7EQAhFPxKWNh2FCx+HkaZI6RRb5DYbyVfIJXLKDCFoMbaTKSw/8ZnPAPjaH2xgZcUNUDADD7D9LtDBCLZ45fbkvo/30K8yeI64pPwl6znd/3n/Oe93P3ho9qeh72btTFzqkz0rsJle8Zr81OLEwZ1dv/713uWqvu2pl+k0fy7MWtj9r/tN5q/02z89qa/L4Dc2LvM93kezPfXlME/O86EbY/V9GB9ePX8G1/6W+/9h1dq/HGfTfzT3j/xNo7522Bfnqe5jO/fvhVthlfk434v3iO9zG/UOphyPeinPl1J8Gtaa7xPTa/Dk+RIs4deMvwGvcGsmsCvJ0AAAAABJRU5ErkJggg==');
+}
+.mydoc_code_pre{
+    padding: 1.2em 1.4em;
+    line-height: 1.5em;
+    margin: 0;
+}.mydoc_h3{
+    margin: 35px 0 0.8em;
+}
+.mydoc_h3_a{
+    font-size: 1.3em;
+    text-decoration: none;
+    color: #2c3e50;
+}
+.mydoc_h3_a::before{
+    content: '';
+    display: block;
+    margin-top: -30px;
+    height: 30px;
+    visibility: hidden;
+}
+.mydoc_h3_h3{
+    margin: 5px 0 8px;
+    border-bottom: 1px solid #ddd;
+    font-size: 18px;
+    padding-bottom: .6em;
+}
+.mydoc_h3_content{
+
+}.mydoc_span{
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}.mydoc{
+    font-size: 14px;
+    overflow: hidden;
+}</style>
+<article class='mydoc'>
+    <div class="mydoc_h1">
+                <a class="mydoc_h1_a">
+                    <h1 class="mydoc_h1_h1">vue-element-resize-event</h1>
+                </a>
+                <div class="mydoc_h1_content">
+                    
+                </div>
+            </div><p class="mydoc_p"> 一个扩展vue的时间，使其可以监听普通元素的resize事件。HTML中如果在窗口或框架被调整大小时发生resize事件，但是元素尺寸变化的时候却没有对应的事件。但是基于js的奇巧淫技可以模拟出这个事件。</p><p class="mydoc_p"> 模拟的方法主要有两种：<a class="mydoc_a" href="https://github.com/KyleAMathews/element-resize-event">监听scroll事件</a>和嵌入<a class="mydoc_a" href="https://github.com/developit/simple-element-resize-detector">object（iframe）</a>。因为object（iframe）很耗费资源，而且会被CSP策略限制，所以vue-element-resize-event选用了第一种方法。</p><div class="mydoc_h2">
+                    <a class="mydoc_h2_a">
+                        <h2 class="mydoc_h2_h2">安装</h2>
+                    </a>
+                    <div class="mydoc_h2_content">
+                        <figure class='mydoc_code'>
+                    <pre class="mydoc_code_pre cm-s-eclipse">npm install vue<span class="token operator">-</span>element<span class="token operator">-</span>resize<span class="token operator">-</span>event</pre>
+                </figure><p class="mydoc_p"> 可以采用插件形式的全局安装：</p><figure class='mydoc_code'>
+                    <pre class="mydoc_code_pre cm-s-eclipse"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> ElResize <span class="token keyword">from</span> <span class="token string">'vue-element-resize-event'</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElResize<span class="token punctuation">)</span></pre>
+                </figure><p class="mydoc_p"> 也可以采用局部安装：</p><figure class='mydoc_code'>
+                    <pre class="mydoc_code_pre cm-s-eclipse"><span class="token keyword">import</span> <span class="token punctuation">{</span>
+    elresizeDirective<span class="token punctuation">,</span>
+    elresize<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-element-resize-event'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span>
+    directive<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        elresizeDirective<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+    component<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        elresize<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></pre>
+                </figure>
+                    </div>
+                </div><div class="mydoc_h2">
+                    <a class="mydoc_h2_a">
+                        <h2 class="mydoc_h2_h2">使用</h2>
+                    </a>
+                    <div class="mydoc_h2_content">
+                        <p class="mydoc_p"> vue-element-resize-event提供了两种使用方式——directive和component。</p><div class="mydoc_h3">
+                <a class="mydoc_h3_a">
+                    <h3 class="mydoc_h3_h3">指令</h3>
+                </a>
+                <div class="mydoc_h3_content">
+                    <p class="mydoc_p"> 使用<span class="mydoc_span">v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p><figure class='mydoc_code'>
+                    <pre class="mydoc_code_pre cm-s-eclipse"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span> <span class="token attr-name">v-elresize</span> <span class="token attr-name">@elresize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>doc</span><span class="token punctuation">></span></span></pre>
+                </figure><p class="mydoc_p"> <a class="mydoc_a" href="https://laden666666.github.io/vue-element-resize-event/directive.html">demo</a></p>
+                </div>
+            </div><div class="mydoc_h3">
+                <a class="mydoc_h3_a">
+                    <h3 class="mydoc_h3_h3">控件</h3>
+                </a>
+                <div class="mydoc_h3_content">
+                    <p class="mydoc_p"> 使用<span class="mydoc_span">Elresize</span>控件监听elresize事件：</p><figure class='mydoc_code'>
+                    <pre class="mydoc_code_pre cm-s-eclipse"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Elresize</span> <span class="token attr-name">@elresize</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>test<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Elresize</span><span class="token punctuation">></span></span></pre>
+                </figure><p class="mydoc_p"> <a class="mydoc_a" href="https://laden666666.github.io/vue-element-resize-event/component.html">demo</a></p>
+                </div>
+            </div>
+                    </div>
+                </div>
+</article>
 </body>
 </html>
