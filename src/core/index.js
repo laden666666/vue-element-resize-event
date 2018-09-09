@@ -9,5 +9,11 @@ function install(Vue, options) {
 export {
     install,
     elresizeDirective,
-    elresize,
+    Elresize,
+}
+
+export default {
+    install,
+    elresizeDirective,
+    Elresize,
 }

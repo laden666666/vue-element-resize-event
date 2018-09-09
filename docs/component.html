@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -41,37 +42,37 @@
             display: inline-block;
         }
         .range{
-            width: 140px; 
-            -webkit-appearance: none;  
-            background: #059CFA; 
+            width: 140px;
+            -webkit-appearance: none;
+            background: #059CFA;
             height: 3px;
             outline: none;
             vertical-align: middle;
         }
-        .range::-webkit-slider-thumb {  
-            -webkit-appearance: none; 
-            height: 26px;  
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 26px;
             width: 26px;
             background: #fff;
-            border-radius: 50%;  
+            border-radius: 50%;
             border: solid 1px #ddd;
-        }   
+        }
     </style>
-        
+
 </head>
 <body>
 
     <div id="app">
         <div class="test">
             <label class="label">
-                <span class="title">width:</span> 
+                <span class="title">width:</span>
                 <input id="widthInput" type="range" class="range" max="200" min="100" v-model="width">px
             </label>
             <label class="label">
-                <span class="title">height:</span> 
+                <span class="title">height:</span>
                 <input id="heightInput" type="range" class="range" max="200" min="100" v-model="height">px
             </label>
-    
+
             <Elresize class="box" :style="{width: width + 'px', height: height + 'px'}" @elresize="test">
                 resize count : {{resizeCount}}
             </Elresize>

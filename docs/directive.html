@@ -1,9 +1,6 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="./vue-element-resize-event.js"></script>
     <style>
@@ -41,37 +38,37 @@
             display: inline-block;
         }
         .range{
-            width: 140px; 
-            -webkit-appearance: none;  
-            background: #059CFA; 
+            width: 140px;
+            -webkit-appearance: none;
+            background: #059CFA;
             height: 3px;
             outline: none;
             vertical-align: middle;
         }
-        .range::-webkit-slider-thumb {  
-            -webkit-appearance: none; 
-            height: 26px;  
+        .range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 26px;
             width: 26px;
             background: #fff;
-            border-radius: 50%;  
+            border-radius: 50%;
             border: solid 1px #ddd;
-        }   
+        }
     </style>
-        
+
 </head>
 <body>
 
     <div id="app">
         <div class="test">
             <label class="label">
-                <span class="title">width:</span> 
+                <span class="title">width:</span>
                 <input id="widthInput" type="range" class="range" max="200" min="100" v-model="width">px
             </label>
             <label class="label">
-                <span class="title">height:</span> 
+                <span class="title">height:</span>
                 <input id="heightInput" type="range" class="range" max="200" min="100" v-model="height">px
             </label>
-    
+
             <div class="box" :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test">
                 resize count : {{resizeCount}}
             </div>

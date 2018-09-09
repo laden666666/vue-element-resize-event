@@ -1,21 +1,27 @@
 <template>
     <div class="test">
         <label class="label">
-            <span class="title">width:</span> 
+            <span class="title">width:</span>
             <input id="widthInput" type="range" class="range" max="200" min="100" v-model="width">px
         </label>
         <label class="label">
-            <span class="title">height:</span> 
+            <span class="title">height:</span>
             <input id="heightInput" type="range" class="range" max="200" min="100" v-model="height">px
         </label>
+        <label class="label">
+            <span class="title">v-if:</span>
+            <input clss="checkbox" type="checkbox" v-model="vif">
+        </label>
 
-        <!-- <Elresize class="box" :style="{width: width + 'px', height: height + 'px'}" @elresize="test">
+        <!-- <Elresize class="box" v-if="vif" :style="{width: width + 'px', height: height + 'px'}" @elresize="test">
             resize count : {{resizeCount}}
         </Elresize> -->
-        
-        <div class="box" :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test">
+
+        <div class="box" v-if="vif" :style="{width: width + 'px', height: height + 'px'}" v-elresize @elresize="test">
             resize count : {{resizeCount}}
         </div>
+
+
     </div>
 </template>
 
@@ -25,12 +31,16 @@ export default {
         return {
             width: '200',
             height: '200',
-            resizeCount: 0
+            resizeCount: 0,
+            vif: true,
         }
     },
     methods: {
         test(e){
             this.resizeCount++
+        },
+        toggleIf(e){
+            this.vif = !this.vif
         },
     }
 }
@@ -68,19 +78,27 @@ export default {
         display: inline-block;
     }
     .range{
-        width: 140px; 
-        -webkit-appearance: none;  
-        background: #059CFA; 
+        width: 140px;
+        -webkit-appearance: none;
+        background: #059CFA;
         height: 3px;
         outline: none;
         vertical-align: middle;
     }
-    .range::-webkit-slider-thumb {  
-        -webkit-appearance: none; 
-        height: 26px;  
+    .checkbox{
+        width: 140px;
+        -webkit-appearance: none;
+        background: #059CFA;
+        height: 3px;
+        outline: none;
+        vertical-align: middle;
+    }
+    .range::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        height: 26px;
         width: 26px;
         background: #fff;
-        border-radius: 50%;  
+        border-radius: 50%;
         border: solid 1px #ddd;
-    }   
+    }
 </style>

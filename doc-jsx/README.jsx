@@ -1,7 +1,13 @@
 <doc>
-    <h1>vue-element-resize-event</h1>
-    <p>一个扩展vue的事件，使其可以监听普通元素的resize事件。HTML中如果在窗口或框架被调整大小时发生resize事件，但是元素尺寸变化的时候却没有对应的事件。但是基于js的奇巧淫技可以模拟出这个事件。</p>
-    <p>模拟的方法主要有两种：<a href="https://github.com/KyleAMathews/element-resize-event">监听scroll事件</a>和嵌入<a href="https://github.com/developit/simple-element-resize-detector">object（iframe）</a>。因为object（iframe）很耗费资源，而且会被CSP策略限制，所以vue-element-resize-event选用了第一种方法。</p>
+    <title>vue-element-resize-event</title>
+
+    <npm-info version downloads license name="vue-element-resize-event"></npm-info>
+    <browser-list Android=">=4.4" Firefox Chrome IE=">=9" iPhone Edge Safari/>
+
+    <p><strong>vue-element-resize-event</strong>，简称elresize，是一个扩展vue事件的插件，使其可以监听普通元素的resize事件。HTML中如果在窗口或框架被调整大小时发生resize事件，但是元素尺寸变化的时候却没有对应的事件。但是基于js的奇巧淫技可以模拟出这个事件。</p>
+
+    <h2>源码</h2>
+    <p><a href="https://github.com/laden666666/vue-element-resize-event">github</a>，<a href="https://gitee.com/laden666666/vue-element-resize-event">码云</a></p>
 
     <h2>安装</h2>
     <code lang="javascript">{
@@ -50,5 +56,15 @@ export default {
 `<Elresize @elresize="test"></Elresize>`
     }</code>
     <p><a href="https://laden666666.github.io/vue-element-resize-event/component.html">demo</a></p>
+
+    <h2>原理</h2>
+    <p>模拟resize事件目前主要有两种：</p>
+    <li>方法一，监听scroll事件：</li>
+    <p>要求可以监听resize事件的元素的css的position属性不可以是static，然后创建两个和该元素等大的div，一个监听元素放大事件，一个监听元素缩小事件。两个div都是绝对定位，并且css的visibility属性是hidden，同时使用js将水平和垂直滚动条的值都设置大最大。实现的例子有：<a href="https://github.com/KyleAMathews/element-resize-event">KyleAMathews/element-resize-event</a></p>
+
+    <li>方法二，监听object（iframe）的resize事件：</li>
+    <p>同样要求可以监听resize事件的元素的css的position属性不可以是static，然后创建一个iframe或者object。因为frame和object可以监听resize事件，所以只要要求frame或object和被监听元素等大，就可以让frame或object的resize事件实现该元素的resize事件了。实现的例子有：<a href="https://github.com/developit/simple-element-resize-detector">developit/simple-element-resize-detector</a></p>
+
+    <p>因为object（iframe）更耗费资源，而且会被CSP策略限制，所以vue-element-resize-event选用了第一种方法。</p>
+
 </doc>
-    
