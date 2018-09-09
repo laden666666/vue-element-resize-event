@@ -1,7 +1,10 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
 const utils = require('./utils')
 const vueLoaderConfig = require('./vue-loader.conf')
+const _package = require('../package.json')
+
 
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
@@ -40,5 +43,10 @@ module.exports = {
         net: 'empty',
         tls: 'empty',
         child_process: 'empty'
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            PLUGIN_VERSION: '"v' + _package.version + '"'
+        }),
+    ]
 }

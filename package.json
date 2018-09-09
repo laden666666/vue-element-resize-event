@@ -1,8 +1,17 @@
 {
   "name": "vue-element-resize-event",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Extend Vue to add resize event for most components",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laden666666/vue-element-resize-event.git"
+  },
   "author": "laden666666",
+  "bugs": {
+    "url": "https://github.com/laden666666/vue-element-resize-event/issues"
+  },
+  "homepage": "https://github.com/laden666666/vue-element-resize-event#readme",
+  "license": "MIT",
   "main": "dist/vue-element-resize-event.js",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

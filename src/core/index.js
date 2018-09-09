@@ -6,14 +6,18 @@ function install(Vue, options) {
     Vue.component('Elresize', Elresize)
 }
 
+const version = PLUGIN_VERSION
+
 export {
     install,
     elresizeDirective,
     Elresize,
+    version
 }
 
 export default {
     install,
     elresizeDirective,
     Elresize,
+    version
 }
