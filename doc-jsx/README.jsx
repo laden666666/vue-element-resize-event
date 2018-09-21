@@ -45,8 +45,7 @@ export default {
     <h3>指令</h3>
     <p>使用<span>v-elresize</span>指令监听elresize事件。要求v-elresize所在的元素的position值不能为static：</p>
     <code lang="html">{
-`<div style="position: relative;" v-elresize @elresize="test"></div>
-</doc>`
+`<div style="position: relative;" v-elresize @elresize="test"></div>`
     }</code>
     <p><a href="https://laden666666.github.io/vue-element-resize-event/directive.html">demo</a></p>
 

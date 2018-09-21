@@ -62,7 +62,6 @@ vue-element-resize-event提供了两种使用方式——directive和component�
 
 ```html
 <div style="position: relative;" v-elresize @elresize="test"></div>
-</doc>
 ```
 [demo](https://laden666666.github.io/vue-element-resize-event/directive.html "") 
 
