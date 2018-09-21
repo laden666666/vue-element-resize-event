@@ -4,7 +4,7 @@
     <npm-info version downloads license name="vue-element-resize-event"></npm-info>
     <browser-list Android=">=4.4" Firefox Chrome IE=">=9" iPhone Edge Safari/>
 
-    <p><strong>vue-element-resize-event</strong>，简称elresize，是一个扩展vue事件的插件，使其可以监听普通元素的resize事件。HTML中如果在窗口或框架被调整大小时发生resize事件，但是元素尺寸变化的时候却没有对应的事件。但是基于js的奇巧淫技可以模拟出这个事件。</p>
+    <p><strong>vue-element-resize-event</strong>，简称elresize，是一个扩展vue事件的插件，使vue可以监听普通元素的resize事件。HTML中如果在页面或框架被调整大小时会触发resize事件，但是普通元素尺寸变化的时候却没有对应的事件。<strong>vue-element-resize-event</strong>基于js的奇巧淫技可以模拟出这个事件。</p>
 
     <h2>源码</h2>
     <p><a href="https://github.com/laden666666/vue-element-resize-event">github</a>，<a href="https://gitee.com/laden666666/vue-element-resize-event">码云</a></p>
