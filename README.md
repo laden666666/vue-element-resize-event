@@ -80,7 +80,7 @@ vue-element-resize-event提供了两种使用方式——directive和component�
 模拟resize事件目前主要有两种：
 
 *   方法一，监听scroll事件：
-要求可以监听resize事件的元素的css的position属性不可以是static，然后创建两个和该元素等大的div，一个监听元素放大事件，一个监听元素缩小事件。两个div都是绝对定位，并且css的visibility属性是hidden，同时使用js将水平和垂直滚动条的值都设置大最大。实现的例子有：[KyleAMathews/element-resize-event](https://github.com/KyleAMathews/element-resize-event "") 
+要求可以监听resize事件的元素的css的position属性不可以是static，然后创建两个和该元素等大的div，一个监听元素放大事件，一个监听元素缩小事件。两个子div都是绝对定位，并且css的visibility属性是hidden。通过在元素尺寸变化的时候，两个子div的onscroll事件来模拟该元素的resize事件。实现的例子有：[KyleAMathews/element-resize-event](https://github.com/KyleAMathews/element-resize-event "") 
 
 *   方法二，监听object（iframe）的resize事件：
 同样要求可以监听resize事件的元素的css的position属性不可以是static，然后创建一个iframe或者object。因为frame和object可以监听resize事件，所以只要要求frame或object和被监听元素等大，就可以让frame或object的resize事件实现该元素的resize事件了。实现的例子有：[developit/simple-element-resize-detector](https://github.com/developit/simple-element-resize-detector "") 
